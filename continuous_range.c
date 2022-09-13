@@ -12,7 +12,7 @@ void printCurrentRanges()
     printf("\nRange,  Readings");
     for( int i = 0 ; i < Range.TotalRanges; i++ ) 
     {   
-        printf("\n%d-%d  %d", Range.rangeMin[i],Range.rangeMax[i], Range.rangeCounts[i]);
+        printf("\n%d-%d,  %d", Range.rangeMin[i],Range.rangeMax[i], Range.rangeCounts[i]);
     }
 }
 
