@@ -4,6 +4,13 @@
 
 int ConvertD2A(int digital)
 {
-  float analog = (float) (digital*10)/4095;
+  if ((digital < 0) || (digital> 4095))
+  {
+    return ERROR_INVALID_VALUE;
+  }
+  else
+  {
+    float analog = (float) (digital*10)/4095;
+  }
   return (int)round(analog);
 }
