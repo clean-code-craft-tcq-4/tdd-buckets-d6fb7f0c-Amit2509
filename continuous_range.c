@@ -59,9 +59,5 @@ int DetectCurrentRanges(int* DigitalCurrentValues, int numOfDigitalValues, int* 
    {
       DetectRanges(AnalogCurrentValues, numOfAnalogValues);
    }
-   else
-   {
-      return ERROR_INVALID_VALUE;
-   }
    return numOfAnalogValues;
 }
