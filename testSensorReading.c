@@ -43,7 +43,7 @@ void testReadCurrentSensor()
   int expectedAnalog[] = {3, 5, 9};                        /*Expecting Total 3 samples.*/
   int numOfCurrSample = sizeof(CurrentDigital)/sizeof(CurrentDigital[0]);
   int CurrentAnalog[numOfCurrSample];
-  int numOfAnalogValues = ReadCurrentSensor(CurrentDigital, numOfCurrSample, CurrentAnalog);
+  int numOfAnalogValues = ReadCurrentSensor(CurrentDigital, numOfCurrSample, CurrentAnalog, 0);
   assert(numOfAnalogValues == 3);
   for(int i = 0; i < numOfAnalogValues; i++)
   {
