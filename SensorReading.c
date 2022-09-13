@@ -4,6 +4,6 @@
 
 int ConvertD2A(int digital)
 {
-  int analog = (int) round(10*digital/4095);
-  return analog;
+  float analog = (float) (digital*10)/4095;
+  return (int)round(analog);
 }
