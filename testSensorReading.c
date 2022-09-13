@@ -29,10 +29,10 @@ void testConvertD2A_2()
    currentValue = ConvertD2A_2(1022);
    assert(currentValue == 15);
   
-   currentValue = ConvertD2A_1(-1);
+   currentValue = ConvertD2A_2(-1);
    assert(currentValue == ERROR_INVALID_VALUE);
    
-   currentValue = ConvertD2A_1(1023);
+   currentValue = ConvertD2A_2(1023);
    assert(currentValue == ERROR_INVALID_VALUE);
 }
 
