@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
+#include "testRange.h"
 #include "continuous_range.h"
+
 
 void testCmpFuncForQSort()
 {
@@ -62,12 +64,4 @@ void testDetectRanges()
   assert (Range.rangeCounts[1] == 3);
   
   assert (Range.TotalRanges == 2);
-}
-
-
-int main()
-{
-  testseparateRanges();
-  testDetectRanges();  
-  testCmpFuncForQSort();
 }
