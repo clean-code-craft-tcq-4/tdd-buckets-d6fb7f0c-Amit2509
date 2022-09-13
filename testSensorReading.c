@@ -3,18 +3,37 @@
 #include "testSensorReading.h"
 #include "SensorReading.h"
 
-void testConvertD2A()
+void testConvertD2A_1()
 {
    int currentValue;
-   currentValue = ConvertD2A(1146);
+   currentValue = ConvertD2A_1(1146);
    assert(currentValue == 3);
   
-   currentValue = ConvertD2A(4096);
+   currentValue = ConvertD2A_1(4096);
    assert(currentValue == ERROR_INVALID_VALUE);
    
-   currentValue = ConvertD2A(-1);
+   currentValue = ConvertD2A_1(-1);
    assert(currentValue == ERROR_INVALID_VALUE);
   
+}
+
+void testConvertD2A_2()
+{
+   int currentValue;
+   currentValue = ConvertD2A_2(0);
+   assert(currentValue == -15);
+  
+   currentValue = ConvertD2A_2(511);
+   assert(currentValue == 0);
+   
+   currentValue = ConvertD2A_2(1022);
+   assert(currentValue == 15);
+  
+   currentValue = ConvertD2A_1(-1);
+   assert(currentValue == ERROR_INVALID_VALUE);
+   
+   currentValue = ConvertD2A_1(1023);
+   assert(currentValue == ERROR_INVALID_VALUE);
 }
 
 
