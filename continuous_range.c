@@ -52,9 +52,9 @@ void DetectRanges(int* CurrentValues, int numberOfCurrValues)
   separateRanges(CurrentValues, numberOfCurrValues);
 }
 
-int DetectCurrentRanges(int* DigitalCurrentValues, int numOfDigitalValues, int* AnalogCurrentValues)
+int DetectCurrentRanges(int* DigitalCurrentValues, int numOfDigitalValues, int* AnalogCurrentValues, int SensorID)
 {
-   int numOfAnalogValues = ReadCurrentSensor(DigitalCurrentValues, numOfDigitalValues, AnalogCurrentValues, 0);
+   int numOfAnalogValues = ReadCurrentSensor(DigitalCurrentValues, numOfDigitalValues, AnalogCurrentValues, SensorID);
    if (numOfAnalogValues > 0)
    {
       DetectRanges(AnalogCurrentValues, numOfAnalogValues);
