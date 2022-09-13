@@ -84,7 +84,6 @@ void testDetectCurrentRanges()
   int numberOfCurrSample2 = sizeof(DigitalcurrentSample2)/sizeof(DigitalcurrentSample2[0]);
   int currentAnalog2[numberOfCurrSample2];
   numbOfAnalogValues = DetectCurrentRanges(DigitalcurrentSample2, numberOfCurrSample2, currentAnalog2);
-  printCurrentRanges();
   assert (numbOfAnalogValues == 0);
     
 }
