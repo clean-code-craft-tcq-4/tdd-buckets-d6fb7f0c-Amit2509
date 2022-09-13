@@ -71,8 +71,9 @@ void testDetectCurrentRanges()
   int DigitalcurrentSample1[] = {1228, 1228, 2047, 1638, 4095, 3685, 3276};
   int numberOfCurrSample1 = sizeof(DigitalcurrentSample1)/sizeof(DigitalcurrentSample1[0]);
   int currentAnalog1[numberOfCurrSample1];
-  int numbOfAnalogValues;
-  numbOfAnalogValues = DetectCurrentRanges(DigitalcurrentSample1, numberOfCurrSample1, currentAnalog1);
+  int numbOfAnalogValues, SensorID;
+  SensorID = 0;
+  numbOfAnalogValues = DetectCurrentRanges(DigitalcurrentSample1, numberOfCurrSample1, currentAnalog1, SensorID);
   printCurrentRanges();
   assert (numbOfAnalogValues == 7);
   assert (Range.rangeMin[0] == 3);
@@ -81,7 +82,7 @@ void testDetectCurrentRanges()
   
   
   int DigitalcurrentSample2[] = {4097, -23};
-  int numberOfCurrSample2 = sizeof(DigitalcurrentSample2)/sizeof(DigitalcurrentSample2[0]);
+  int numberOfCurrSample2 = sizeof(DigitalcurrentSample2)/sizeof(DigitalcurrentSample2[0], SensorID);
   int currentAnalog2[numberOfCurrSample2];
   numbOfAnalogValues = DetectCurrentRanges(DigitalcurrentSample2, numberOfCurrSample2, currentAnalog2);
   assert (numbOfAnalogValues == 0);
