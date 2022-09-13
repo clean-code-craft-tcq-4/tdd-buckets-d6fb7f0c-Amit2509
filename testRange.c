@@ -68,9 +68,10 @@ void testDetectRanges()
 
 void testDetectCurrentRanges()
 {
-  int currentSample[] = {1228, 1228, 2047, 1638, 4095, 3685, 3276};
-  int numberOfCurrSample = sizeof(currentSample)/sizeof(currentSample[0]);
-  DetectCurrentRanges(currentSample, numberOfCurrSample);
+  int currentSampleDigital[] = {1228, 1228, 2047, 1638, 4095, 3685, 3276};
+  int numberOfCurrSample = sizeof(currentSampleDigital)/sizeof(currentSampleDigital[0]);
+  int currentAnalog[currentSampleDigital];
+  DetectCurrentRanges(currentSample, numberOfCurrSample, currentAnalog);
   printCurrentRanges();
   assert (Range.rangeMin[0] == 3);
   assert (Range.rangeMax[0] == 5);
