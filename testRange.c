@@ -68,13 +68,23 @@ void testDetectRanges()
 
 void testDetectCurrentRanges()
 {
-  int currentSampleDigital[] = {1228, 1228, 2047, 1638, 4095, 3685, 3276};
-  int numberOfCurrSample = sizeof(currentSampleDigital)/sizeof(currentSampleDigital[0]);
-  int currentAnalog[numberOfCurrSample];
-  DetectCurrentRanges(currentSampleDigital, numberOfCurrSample, currentAnalog);
+  int DigitalcurrentSample1[] = {1228, 1228, 2047, 1638, 4095, 3685, 3276};
+  int numberOfCurrSample1 = sizeof(DigitalcurrentSample1)/sizeof(DigitalcurrentSample1[0]);
+  int currentAnalog[numberOfCurrSample1];
+  int numbOfAnalogValues;
+  numbOfAnalogValues = DetectCurrentRanges(DigitalcurrentSample1, numberOfCurrSample1, currentAnalog);
   printCurrentRanges();
+  assert (numbOfAnalogValues == 7);
   assert (Range.rangeMin[0] == 3);
   assert (Range.rangeMax[0] == 5);
   assert (Range.rangeCounts[0] == 4);
   
+  
+  int DigitalcurrentSample2[] = {4097, -23};
+  int numberOfCurrSample2 = sizeof(DigitalcurrentSample2)/sizeof(DigitalcurrentSample2[0]);
+  int currentAnalog[numberOfCurrSample2];
+  numbOfAnalogValues = DetectCurrentRanges(DigitalcurrentSample1, numberOfCurrSample1, currentAnalog);
+  printCurrentRanges();
+  assert (numbOfAnalogValues == ERROR_INVALID_VALUE);
+    
 }
