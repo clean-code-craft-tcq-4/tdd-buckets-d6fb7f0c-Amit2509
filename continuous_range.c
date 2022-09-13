@@ -23,6 +23,7 @@ void separateRanges(int* CurrentValues, int numberOfCurrValues)
   Range.rangeMin[counter] = CurrentValues[newMinIndex];
   Range.rangeMax[counter] = CurrentValues[newMinIndex];
   Range.rangeCounts[counter] = 1;
+  Range.TotalRanges = 1;
   for (int i=1; i<numberOfCurrValues; i++)
   {       
        if ((CurrentValues[i]-CurrentValues[i-1])>1)
