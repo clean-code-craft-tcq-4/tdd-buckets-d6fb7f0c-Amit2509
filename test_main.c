@@ -13,5 +13,5 @@ int main()
   testConvertD2A();
   testReadCurrentSensor();
   
-  //testDetectCurrentRanges();
+  testDetectCurrentRanges();
 }
