@@ -10,7 +10,8 @@ int main()
   testDetectRanges();  
   testCmpFuncForQSort();
   
-  testConvertD2A();
+  testConvertD2A_1();
+  testConvertD2A_2();
   testReadCurrentSensor();
   
   testDetectCurrentRanges();
