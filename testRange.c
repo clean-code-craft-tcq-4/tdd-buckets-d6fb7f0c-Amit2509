@@ -34,12 +34,15 @@ void testseparateRanges()
   assert (Range.TotalRanges == 1);
   
   
-  currentSample[] = {-4, 5};
+  currentSample[0] = -4;
   numberOfCurrSample = sizeof(currentSample)/sizeof(currentSample[0]);
   separateRanges(currentSample, numberOfCurrSample);
   assert (Range.rangeMin[0] == -4);
   assert (Range.rangeMax[0] == -4);
   assert (Range.rangeCounts[0] == 1);
+  assert (Range.rangeMin[1] == 5);
+  assert (Range.rangeMax[1] == 5);
+  assert (Range.rangeCounts[1] == 1);
   assert (Range.TotalRanges == 2);
 }
 
