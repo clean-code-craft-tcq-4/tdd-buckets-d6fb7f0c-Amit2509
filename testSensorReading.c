@@ -11,4 +11,8 @@ void testConvertD2A()
   
    currentValue = ConvertD2A(4096);
    assert(currentValue == ERROR_INVALID_VALUE);
+   
+   currentValue = ConvertD2A(-1);
+   assert(currentValue == ERROR_INVALID_VALUE);
+  
 }
