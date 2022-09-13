@@ -11,5 +11,8 @@ typedef struct
 }rangeT;
 
 extern rangeT Range;
+
+int CmpFuncForQSort (const void * a, const void * b);
+void printCurrentRanges();
 void separateRanges(int* SortedCurrentValues, int numberOfCurrValues);
 void DetectRanges(int* CurrentValues, int numberOfCurrValues);
