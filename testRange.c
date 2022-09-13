@@ -7,6 +7,7 @@ int main()
   int currentSample[] = {3, 3, 5, 4, 10, 11, 12};
   int numberOfCurrSample = sizeof(currentSample)/sizeof(currentSample[0]);
   DetectRanges(currentSample, numberOfCurrSample);
+  printCurrentRanges();
   assert (Range.rangeMin[0] == 3);
   assert (Range.rangeMax[0] == 5);
   assert (Range.rangeCounts[0] == 4);
