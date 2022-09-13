@@ -36,7 +36,7 @@ int ReadCurrentSensor(int* Digital, int numOfDigitalValues, int* Analog, int sen
   int numOfAnalogValues = 0;
   for(int i = 0; i < numOfDigitalValues; i++)
   {
-    analog = ConvertD2A[sensorID](Digital[i]);
+    analog = ConverterD2A[sensorID](Digital[i]);
     if(analog != ERROR_INVALID_VALUE)
     {
       Analog[numOfAnalogValues] = abs(analog);
