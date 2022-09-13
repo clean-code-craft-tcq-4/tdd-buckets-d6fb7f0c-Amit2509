@@ -4,4 +4,4 @@
 
 int ConvertD2A_1(int digital);
 int ConvertD2A_2(int digital);
-int ReadCurrentSensor(int* Digital, int numOfDigitalValues, int* Analog);
+int ReadCurrentSensor(int* Digital, int numOfDigitalValues, int* Analog, int sensorID);
