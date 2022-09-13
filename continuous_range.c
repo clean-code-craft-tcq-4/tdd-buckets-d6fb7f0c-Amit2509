@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "continuous_range.h"
-
+rangeT Range;
 int CmpFuncForQSort (const void * a, const void * b) {
    return ( *(int*)a - *(int*)b );
 }
