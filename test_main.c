@@ -10,4 +10,5 @@ int main()
   testDetectRanges();  
   testCmpFuncForQSort();
   testConvertD2A();
+  testDetectCurrentRanges();
 }
