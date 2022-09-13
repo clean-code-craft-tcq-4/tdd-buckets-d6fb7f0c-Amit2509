@@ -4,9 +4,9 @@
 
 typedef struct
 {
-    int rangeMin[10];
-    int rangeMax[10];
-    int rangeCounts[10];
+    int rangeMin[MAX_POSSIBLE_RANGES];
+    int rangeMax[MAX_POSSIBLE_RANGES];
+    int rangeCounts[MAX_POSSIBLE_RANGES];
     int TotalRanges;
 }rangeT;
 
