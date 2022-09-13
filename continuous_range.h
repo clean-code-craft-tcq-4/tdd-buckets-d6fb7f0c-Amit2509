@@ -11,5 +11,5 @@ typedef struct
 }rangeT;
 
 rangeT Range;
-void separateRanges(int* SortedCurrentValues, int numberOfCurrValues)
+void separateRanges(int* SortedCurrentValues, int numberOfCurrValues);
 void DetectRanges(int* CurrentValues, int numberOfCurrValues);
