@@ -5,7 +5,9 @@
 int main()
 {
   int currentSample[] = {3, 3, 5, 4, 10, 11, 12};
-  int numOfRanges = DetectRanges(currentSample);
-  assert (numOfRanges == 2);
-
+  DetectRanges(currentSample);
+  assert (Range.rangeMin[0] == 3);
+  assert (Range.rangeMax[0] == 5);
+  assert (Range.rangeCount[0] == 4);
+  assert (Range.TotalRanges == 2);
 }
