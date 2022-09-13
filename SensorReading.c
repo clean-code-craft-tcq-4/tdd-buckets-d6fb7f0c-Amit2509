@@ -28,7 +28,7 @@ int ConvertD2A_2(int digital)
   }
 }
 
-static void (*ConverterD2A[])(int) = {ConvertD2A_1, ConvertD2A_2};
+static int (*ConverterD2A[])(int) = {ConvertD2A_1, ConvertD2A_2};
 
 int ReadCurrentSensor(int* Digital, int numOfDigitalValues, int* Analog, int sensorID)
 {
