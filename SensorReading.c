@@ -11,6 +11,6 @@ int ConvertD2A(int digital)
   else
   {
     float analog = (float) (digital*10)/4095;
+    return (int)round(analog);
   }
-  return (int)round(analog);
 }
