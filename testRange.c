@@ -8,6 +8,6 @@ int main()
   DetectRanges(currentSample);
   assert (Range.rangeMin[0] == 3);
   assert (Range.rangeMax[0] == 5);
-  assert (Range.rangeCount[0] == 4);
+  assert (Range.rangeCounts[0] == 4);
   assert (Range.TotalRanges == 2);
 }
