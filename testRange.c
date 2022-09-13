@@ -65,3 +65,15 @@ void testDetectRanges()
   
   assert (Range.TotalRanges == 2);
 }
+
+void testDetectCurrentRanges()
+{
+  int currentSample[] = {1228, 1228, 2047, 1638, 4095, 3685, 3276};
+  int numberOfCurrSample = sizeof(currentSample)/sizeof(currentSample[0]);
+  DetectCurrentRanges(currentSample, numberOfCurrSample);
+  printCurrentRanges();
+  assert (Range.rangeMin[0] == 3);
+  assert (Range.rangeMax[0] == 5);
+  assert (Range.rangeCounts[0] == 4);
+  
+}
