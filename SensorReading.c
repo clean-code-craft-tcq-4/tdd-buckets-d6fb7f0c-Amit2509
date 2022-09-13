@@ -14,3 +14,19 @@ int ConvertD2A(int digital)
     return (int)round(analog);
   }
 }
+
+int ReadCurrentSensor(int* Digital, int numOfDigitalValues, int* Analog)
+{
+  int analog;
+  int numOfAnalogValues = 0;
+  for(int i=0; i < numOfDigitalValues; i++)
+  {
+    analog = ConvertD2A(Digital);
+    if(analog != ERROR_INVALID_VALUE)
+    {
+      Analog[numOfAnalogValues] = analog;
+      numOfAnalogValues++;
+    }
+  }
+  return numOfAnalogValues;
+}
