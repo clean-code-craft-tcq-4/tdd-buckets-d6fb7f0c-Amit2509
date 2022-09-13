@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "continuous_range.h"
+#include "SensorReading.h"
+
 rangeT Range;
 
 int CmpFuncForQSort (const void * a, const void * b) {
@@ -48,4 +50,11 @@ void DetectRanges(int* CurrentValues, int numberOfCurrValues)
 {
   qsort(CurrentValues, numberOfCurrValues, sizeof(int), CmpFuncForQSort);
   separateRanges(CurrentValues, numberOfCurrValues);
+}
+
+void DetectCurrentRanges(int* DigitalCurrentValues, int numOfDigitalValues);
+{
+   int AnalogCurrentValues[numberOfCurrValues];
+   int numOfAnalogValues = ReadCurrentSensor(DigitalCurrentValues, numOfDigitalValues, AnalogCurrentValues);
+   DetectRanges(AnalogCurrentValues, numOfAnalogValues);
 }
