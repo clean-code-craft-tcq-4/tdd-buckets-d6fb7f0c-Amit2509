@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
 #include "testSensorReading.h"
+#include "SensorReading.h"
 
-void testConverD2A()
+void testConvertD2A()
 {
    int currentValue;
    currentValue = ConvertD2A(1146);
