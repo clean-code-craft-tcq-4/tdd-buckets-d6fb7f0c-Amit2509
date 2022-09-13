@@ -9,5 +9,5 @@ int main()
   testseparateRanges();
   testDetectRanges();  
   testCmpFuncForQSort();
-  testConverD2A();
+  testConvertD2A();
 }
