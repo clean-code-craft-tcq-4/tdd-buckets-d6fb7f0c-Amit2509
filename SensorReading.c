@@ -19,9 +19,9 @@ int ReadCurrentSensor(int* Digital, int numOfDigitalValues, int* Analog)
 {
   int analog;
   int numOfAnalogValues = 0;
-  for(int i=0; i < numOfDigitalValues; i++)
+  for(int i = 0; i < numOfDigitalValues; i++)
   {
-    analog = ConvertD2A(Digital);
+    analog = ConvertD2A(Digital[i]);
     if(analog != ERROR_INVALID_VALUE)
     {
       Analog[numOfAnalogValues] = analog;
