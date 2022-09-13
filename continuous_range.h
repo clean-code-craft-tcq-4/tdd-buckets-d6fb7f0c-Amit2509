@@ -16,4 +16,4 @@ int CmpFuncForQSort (const void * a, const void * b);
 void printCurrentRanges();
 void separateRanges(int* SortedCurrentValues, int numberOfCurrValues);
 void DetectRanges(int* CurrentValues, int numberOfCurrValues);
-void DetectCurrentRanges(int* CurrentValues, int numberOfCurrValues);
+int DetectCurrentRanges(int* DigitalCurrentValues, int numOfDigitalValues, int* AnalogCurrentValues);
