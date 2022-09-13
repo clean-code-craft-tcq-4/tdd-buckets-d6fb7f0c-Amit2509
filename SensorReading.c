@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "SensorReading.h"
 
 int ConvertD2A(int digital)
